@@ -1,0 +1,18 @@
+:root {
+--primary-font: "Playfair Display", serif;
+--secondary-font: "Monda", sans-serif;
+
+
+
+  --color-primario: #5b7671;
+  --color-secundario: #99a093;
+  --color-gris-claro: #bbbbb8;
+  --color-gris-muy-claro: #c9cacc;
+  --color-negro: #000000;
+
+    --tam-main-titulo: 3rem;
+    --tam-normal-titulo: 2rem;
+    --tam-sub-titulo: 1.5rem;
+    --tam-texto: 1rem;
+    --tam-seccion: 0.9rem;
+}
