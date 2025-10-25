@@ -16,14 +16,13 @@
     </div>
     <nav class="nav">
       <ul>
-        <li><a href="#">Salud</a></li>
-        <li><a href="#">Deportes</a></li>
-        <li><a href="#">Tecnología</a></li>
-        <li><a href="#">Naturaleza</a></li>
+        <li><a href="Seciones/salud.html">Salud</a></li>
+        <li><a href="Seciones/deporte.html">Deportes</a></li>
+        <li><a href="Seciones/tecnologia.html">Tecnología</a></li>
+        <li><a href="Seciones/naturaleza.html">Naturaleza</a></li>
       </ul>
     </nav>
-    <div class="fecha">
-      <span>Miércoles 24</span>
+    <div class="hora" id="hora"></div>
     </div>
   </header>
 
@@ -96,3 +95,30 @@
   </main>
 </body>
 </html>
+<div class="hora" id="hora"></div>
+
+<script>
+  function actualizarHora() {
+    const ahora = new Date();
+    const horaElemento = document.getElementById("hora");
+
+    // Opciones para mostrar el nombre del mes y formato en español
+    const opcionesFecha = { day: "numeric", month: "long" };
+    const fecha = ahora.toLocaleDateString("es-ES", opcionesFecha);
+
+    // Hora con dos dígitos
+    const hora = ahora.toLocaleTimeString("es-ES", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+
+    // Mostrar fecha + hora
+    horaElemento.textContent = `${fecha} | ${hora}`;
+  }
+
+  // Actualizar cada segundo
+  setInterval(actualizarHora, 1000);
+  actualizarHora();
+</script>
