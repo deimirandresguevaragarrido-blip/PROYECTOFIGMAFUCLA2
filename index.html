@@ -3,28 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias Electiva</title>
-  <link rel="stylesheet" href="vars.css">
-  <link rel="stylesheet" href="style.css">
+  <title>NoticiasElectiva</title>
+  <link rel="stylesheet" href="styles/vars.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="encabezado">
+
+  <!-- Encabezado -->
+  <header class="header">
     <div class="logo">
-      <img src="logo.png" alt="Noticias Electiva">
+      <img src="logo.png" alt="NoticiasElectiva">
     </div>
-    <nav class="menu">
-      <a href="#">Salud</a>
-      <a href="#">Deportes</a>
-      <a href="#">Tecnología</a>
-      <a href="#">Naturaleza</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Salud</a></li>
+        <li><a href="#">Deportes</a></li>
+        <li><a href="#">Tecnología</a></li>
+        <li><a href="#">Naturaleza</a></li>
+      </ul>
     </nav>
     <div class="fecha">
-      <p>Miércoles 24</p>
+      <span>Miércoles 24</span>
     </div>
   </header>
 
-  <main>
-    <section class="tendencia">
+  <!-- Contenedor principal -->
+  <main class="main">
+    <!-- Lateral izquierdo -->
+    <aside class="sidebar">
+      <h3>Lo más actual</h3>
+      <ul>
+        <li>Lorem ipsum dolor sit amet...</li>
+        <li>Lorem ipsum dolor sit amet...</li>
+        <li>Lorem ipsum dolor sit amet...</li>
+        <li>Lorem ipsum dolor sit amet...</li>
+        <li>Lorem ipsum dolor sit amet...</li>
+      </ul>
+    </aside>
+
+    <!-- Sección central -->
+    <section class="contenido">
       <h2>#EnTendencia</h2>
       <div class="tags">
         <button>#Noticia1</button>
@@ -32,60 +50,49 @@
         <button>#Noticia1</button>
       </div>
 
-      <div class="contenido-principal">
-        <aside class="lateral">
-          <h3>Lo más actual</h3>
-          <ul>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-          </ul>
-        </aside>
-
-        <article class="noticia-destacada">
-          <img src="noticia-principal.jpg" alt="Noticia principal">
-          <div class="info">
-            <h4>Titular</h4>
-            <p class="fecha">23 de Septiembre 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Egestas nunc nullam enim lectus phasellus egestas quis. 
-              Adipiscing a odio tortor pellentesque odio quis pellentesque.
-            </p>
-          </div>
-        </article>
-
-        <aside class="publicidad">
-          <h4>Publicidad</h4>
-          <img src="publicidad1.jpg" alt="Publicidad 1">
-          <img src="publicidad2.jpg" alt="Publicidad 2">
-        </aside>
-      </div>
+      <article class="noticia-principal">
+        <img src="principal.jpg" alt="Noticia principal">
+        <div class="placeholder-img grande"></div>
+        <div class="texto">
+          <h3>Titular</h3>
+          <span class="fecha">23 de Septiembre 2025</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+             Egestas nunc nullam enim lectus phasellus egestas quis. 
+             Adipiscing a odio tortor pellentesque odio quis pellentesque.</p>
+        </div>
+      </article>
 
       <div class="noticias-secundarias">
-        <article>
-          <img src="info1.jpg" alt="Info 1">
-          <div class="info">
-            <h5>Título 1</h5>
-            <p class="fecha">14 / 09 / 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Risus sed vulputate aliquam gravida.
-            </p>
+        <div class="noticia-card">
+        <div class="placeholder-img mediana"></div>
+          <img src="info1.jpg" alt="">
+          <div class="texto-card">
+            <h4>Título 1</h4>
+            <span>14 / 09 / 2025</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </article>
-        <article>
-          <img src="info2.jpg" alt="Info 2">
-          <div class="info">
-            <h5>Título 1</h5>
-            <p class="fecha">16 / 09 / 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Risus sed vulputate aliquam gravida.
-            </p>
+        </div>
+
+        <div class="noticia-card">
+        <div class="placeholder-img mediana"></div>
+          <img src="info2.jpg" alt="">
+          <div class="texto-card">
+            <h4>Título 1</h4>
+            <span>16 / 09 / 2025</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
+
+    <!-- Lateral derecho -->
+    <aside class="publicidad">
+      <h4>Publicidad</h4>
+        <div class="placeholder-img anuncio"></div>
+        <div class="placeholder-img anuncio"></div>
+      <img src="postobon.jpg" alt="Publicidad 1">
+      <img src="today.jpg" alt="Publicidad 2">
+    </aside>
   </main>
 </body>
 </html>
