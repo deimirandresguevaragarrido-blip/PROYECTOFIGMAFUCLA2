@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoticiasElectiva - Deportes</title>
+  <link rel="stylesheet" href="../styles/vars.css">
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../logo.png" alt="NoticiasElectiva"></a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="salud.html">Salud</a></li>
+        <li><a href="deporte.html" class="activo">Deportes</a></li>
+        <li><a href="tecnologia.html">Tecnología</a></li>
+        <li><a href="naturaleza.html">Naturaleza</a></li>
+      </ul>
+    </nav>
+    <div class="hora" id="hora"></div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <h3>Últimos resultados</h3>
+      <ul>
+        <li>Colombia 2 - 1 Brasil (Fútbol)</li>
+        <li>Campeonato Nacional de Atletismo</li>
+        <li>Tour de Antioquia 2025</li>
+      </ul>
+    </aside>
+
+    <section class="contenido">
+      <h2>#PasiónPorElDeporte</h2>
+      <div class="tags">
+        <button>#Fútbol</button>
+        <button>#Ciclismo</button>
+        <button>#Atletismo</button>
+      </div>
+
+      <article class="noticia-principal">
+        <img src="../imagenes/deporte-principal.jpg" alt="Deporte principal">
+        <div class="texto">
+          <h3>Colombia logra medalla de oro en atletismo</h3>
+          <span class="fecha">24 de Octubre 2025</span>
+          <p>La atleta vallecaucana María Gómez rompió récord nacional en los 400 metros planos,
+             consiguiendo una destacada participación en los Juegos Panamericanos.</p>
+        </div>
+      </article>
+
+      <div class="noticias-secundarias">
+        <div class="noticia-card">
+          <img src="../imagenes/deporte1.jpg" alt="">
+          <div class="texto-card">
+            <h4>Egan Bernal se prepara para el Giro 2026</h4>
+            <span>19 / 10 / 2025</span>
+            <p>El ciclista colombiano anunció su regreso en plena forma para la próxima temporada.</p>
+          </div>
+        </div>
+
+        <div class="noticia-card">
+          <img src="../imagenes/deporte2.jpg" alt="">
+          <div class="texto-card">
+            <h4>Nuevas promesas del fútbol femenino</h4>
+            <span>15 / 10 / 2025</span>
+            <p>El talento joven colombiano brilla en la liga nacional femenina.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="publicidad">
+      <h4>Publicidad</h4>
+      <img src="../postobon.jpg" alt="Publicidad 1">
+      <img src="../today.jpg" alt="Publicidad 2">
+    </aside>
+  </main>
+
+  <script>
+    function actualizarHora() {
+      const ahora = new Date();
+      const horaElemento = document.getElementById("hora");
+      const opcionesFecha = { day: "numeric", month: "long" };
+      const fecha = ahora.toLocaleDateString("es-ES", opcionesFecha);
+      const hora = ahora.toLocaleTimeString("es-ES", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      });
+      horaElemento.textContent = `${fecha} | ${hora}`;
+    }
+    setInterval(actualizarHora, 1000);
+    actualizarHora();
+  </script>
+
+</body>
+</html>

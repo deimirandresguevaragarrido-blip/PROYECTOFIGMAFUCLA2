@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoticiasElectiva - Salud</title>
+  <link rel="stylesheet" href="../styles/vars.css">
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="logo">
+      <a href="../index.html"><img src="../logo.png" alt="NoticiasElectiva"></a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="salud.html" class="activo">Salud</a></li>
+        <li><a href="deporte.html">Deportes</a></li>
+        <li><a href="tecnologia.html">Tecnología</a></li>
+        <li><a href="naturaleza.html">Naturaleza</a></li>
+      </ul>
+    </nav>
+    <div class="hora" id="hora"></div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="main">
+    <aside class="sidebar">
+      <h3>Temas recientes</h3>
+      <ul>
+        <li>Avances en medicina preventiva</li>
+        <li>Alimentación y bienestar mental</li>
+        <li>Ejercicio para la salud del corazón</li>
+        <li>Vacunas y salud pública</li>
+      </ul>
+    </aside>
+
+    <section class="contenido">
+      <h2>#NoticiasDeSalud</h2>
+      <div class="tags">
+        <button>#Bienestar</button>
+        <button>#Prevención</button>
+        <button>#VidaSana</button>
+      </div>
+
+      <article class="noticia-principal">
+        <img src="../imagenes/salud-principal.jpg" alt="Salud principal">
+        <div class="texto">
+          <h3>Colombia lanza plan nacional de salud preventiva</h3>
+          <span class="fecha">25 de Octubre 2025</span>
+          <p>El Ministerio de Salud presentó una estrategia para reducir enfermedades crónicas
+             mediante campañas de nutrición, actividad física y educación comunitaria.</p>
+        </div>
+      </article>
+
+      <div class="noticias-secundarias">
+        <div class="noticia-card">
+          <img src="../imagenes/salud1.jpg" alt="">
+          <div class="texto-card">
+            <h4>La importancia del sueño en la salud mental</h4>
+            <span>20 / 10 / 2025</span>
+            <p>Un descanso adecuado reduce el estrés y mejora el rendimiento académico y laboral.</p>
+          </div>
+        </div>
+
+        <div class="noticia-card">
+          <img src="../imagenes/salud2.jpg" alt="">
+          <div class="texto-card">
+            <h4>Superalimentos colombianos ganan popularidad</h4>
+            <span>18 / 10 / 2025</span>
+            <p>El açaí y el amaranto se consolidan como aliados para la nutrición saludable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="publicidad">
+      <h4>Publicidad</h4>
+      <img src="../postobon.jpg" alt="Publicidad 1">
+      <img src="../today.jpg" alt="Publicidad 2">
+    </aside>
+  </main>
+
+  <script>
+    function actualizarHora() {
+      const ahora = new Date();
+      const horaElemento = document.getElementById("hora");
+      const opcionesFecha = { day: "numeric", month: "long" };
+      const fecha = ahora.toLocaleDateString("es-ES", opcionesFecha);
+      const hora = ahora.toLocaleTimeString("es-ES", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true
+      });
+      horaElemento.textContent = `${fecha} | ${hora}`;
+    }
+    setInterval(actualizarHora, 1000);
+    actualizarHora();
+  </script>
+
+</body>
+</html>
