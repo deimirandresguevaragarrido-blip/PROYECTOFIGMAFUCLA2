@@ -109,6 +109,7 @@ body {
 }
 
 .noticia-principal {
+  width: 700px;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
@@ -116,7 +117,7 @@ body {
 }
 
 .noticia-principal img {
-  width: 75%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover
@@ -196,7 +197,7 @@ body {
 }
 
 .publicidad img {
-  width: 100%;
+  width: 75%;
   margin-top: 1.2rem;
   border-radius: 8px;
 }
