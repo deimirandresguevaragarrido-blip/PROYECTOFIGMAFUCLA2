@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  font-family: var(--secondary-font);
+  margin: 0;
+  background-color: var(--color-gris-muy-claro);
+  color: var(--color-negro);
+}
+
+header.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav.menu a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--color-negro);
+  font-weight: 600;
+}
+
+nav.menu a:hover {
+  color: var(--color-primario);
+}
+
+.fecha {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+main {
+  padding: 20px;
+}
+
+.tendencia h2 {
+  font-family: var(--primary-font);
+  font-size: var(--tam-normal-titulo);
+  margin-bottom: 10px;
+}
+
+.tags button {
+  background-color: var(--color-secundario);
+  border: none;
+  color: white;
+  margin-right: 10px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tags button:hover {
+  background-color: var(--color-primario);
+}
+
+.contenido-principal {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.lateral {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.lateral h3 {
+  text-align: center;
+  background-color: var(--color-primario);
+  color: white;
+  padding: 8px 0;
+  border-radius: 4px;
+}
+
+.lateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.lateral li {
+  font-size: var(--tam-seccion);
+  border-bottom: 1px solid var(--color-gris-claro);
+  padding: 6px 0;
+}
+
+.noticia-destacada {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.noticia-destacada img {
+  width: 100%;
+  height: auto;
+}
+
+.noticia-destacada .info {
+  padding: 15px;
+}
+
+.noticia-destacada h4 {
+  font-family: var(--primary-font);
+  font-size: var(--tam-sub-titulo);
+}
+
+.publicidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.publicidad img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.noticias-secundarias {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.noticias-secundarias article {
+  background-color: white;
+  border-radius: 8px;
+  width: 48%;
+  overflow: hidden;
+}
+
+.noticias-secundarias img {
+  width: 100%;
+  height: auto;
+}
+
+.noticias-secundarias .info {
+  padding: 10px;
+}
