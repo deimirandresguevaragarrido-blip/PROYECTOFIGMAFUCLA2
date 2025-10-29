@@ -3,28 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias Electiva</title>
-  <link rel="stylesheet" href="vars.css">
-  <link rel="stylesheet" href="style.css">
+  <title>NoticiasElectiva</title>
+  <link rel="stylesheet" href="styles/vars.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="encabezado">
+  <!-- Encabezado -->
+  <!-- Encabezado -->
+  <header class="header">
     <div class="logo">
-      <img src="logo.png" alt="Noticias Electiva">
+      <img src="images/logo.png" alt="NoticiasElectiva">
     </div>
-    <nav class="menu">
-      <a href="#">Salud</a>
-      <a href="#">Deportes</a>
-      <a href="#">Tecnología</a>
-      <a href="#">Naturaleza</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="Seciones/salud.html">Salud</a></li>
+        <li><a href="Seciones/deporte.html">Deportes</a></li>
+        <li><a href="Seciones/tecnologia.html">Tecnología</a></li>
+        <li><a href="Seciones/naturaleza.html">Naturaleza</a></li>
+      </ul>
     </nav>
-    <div class="fecha">
-      <p>Miércoles 24</p>
+    <div class="hora" id="hora"></div>
     </div>
   </header>
 
-  <main>
-    <section class="tendencia">
+  <!-- Contenedor principal -->
+  <main class="main">
+    <!-- Lateral izquierdo -->
+
+<aside class="sidebar">
+  <h3>Lo más actual</h3>
+  <ul>
+    <li><a href="https://www.semana.com/nacion/articulo/en-vivo-elecciones-26-de-octubre-2025-resultados-y-ultimas-noticias/202548/" target="_blank">
+      🗳️ EN VIVO | Elecciones 26 de octubre 2025: resultados y últimas noticias
+    </a></li>
+
+    <li><a href="https://www.eltiempo.com/politica/gobierno/asi-avanza-la-jornada-electoral-en-colombia-hoy-26-de-octubre-2025-934823" target="_blank">
+      🇨🇴 Así avanza la jornada electoral en Colombia este 26 de octubre
+    </a></li>
+
+    <li><a href="https://www.noticiascaracol.com/colombia/masacre-en-floridablanca-cuatro-personas-fueron-halladas-sin-vida-en-zona-boscosa" target="_blank">
+      ⚠️ Masacre en Floridablanca: hallan sin vida a cuatro personas
+    </a></li>
+
+    <li><a href="https://www.elcolombiano.com/colombia/petro-confirma-que-esta-separado-de-veronica-alcocer-DF20437721" target="_blank">
+      💬 Petro confirma separación de Verónica Alcocer
+    </a></li>
+
+    <li><a href="https://www.larepublica.co/economia/colombia-entre-los-paises-con-mayor-carga-tributaria-de-la-ocde-1114829" target="_blank">
+      💸 Colombia entre los países con mayor carga tributaria de la OCDE
+    </a></li>
+  </ul>
+</aside>
+
+
+    <!-- Sección central -->
+    <section class="contenido">
       <h2>#EnTendencia</h2>
       <div class="tags">
         <button>#Noticia1</button>
@@ -32,60 +65,71 @@
         <button>#Noticia1</button>
       </div>
 
-      <div class="contenido-principal">
-        <aside class="lateral">
-          <h3>Lo más actual</h3>
-          <ul>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-            <li>Lorem ipsum dolor sit amet...</li>
-          </ul>
-        </aside>
-
-        <article class="noticia-destacada">
-          <img src="noticia-principal.jpg" alt="Noticia principal">
-          <div class="info">
-            <h4>Titular</h4>
-            <p class="fecha">23 de Septiembre 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Egestas nunc nullam enim lectus phasellus egestas quis. 
-              Adipiscing a odio tortor pellentesque odio quis pellentesque.
-            </p>
-          </div>
-        </article>
-
-        <aside class="publicidad">
-          <h4>Publicidad</h4>
-          <img src="publicidad1.jpg" alt="Publicidad 1">
-          <img src="publicidad2.jpg" alt="Publicidad 2">
-        </aside>
-      </div>
+      <article class="noticia-principal">
+        <img src="images/principal.jpeg" alt="Noticia principal">
+        <div class="texto">
+          <h3>Titular</h3>
+          <span class="fecha">23 de Septiembre 2025</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+             Egestas nunc nullam enim lectus phasellus egestas quis. 
+             Adipiscing a odio tortor pellentesque odio quis pellentesque.</p>
+        </div>
+      </article>
 
       <div class="noticias-secundarias">
-        <article>
-          <img src="info1.jpg" alt="Info 1">
-          <div class="info">
-            <h5>Título 1</h5>
-            <p class="fecha">14 / 09 / 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Risus sed vulputate aliquam gravida.
-            </p>
+        <div class="noticia-card">
+          <img src="info1.jpg" alt="">
+          <div class="texto-card">
+            <h4>Título 1</h4>
+            <span>14 / 09 / 2025</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </article>
-        <article>
-          <img src="info2.jpg" alt="Info 2">
-          <div class="info">
-            <h5>Título 1</h5>
-            <p class="fecha">16 / 09 / 2025</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Risus sed vulputate aliquam gravida.
-            </p>
+        </div>
+
+        <div class="noticia-card">
+          <img src="info2.jpg" alt="">
+          <div class="texto-card">
+            <h4>Título 1</h4>
+            <span>16 / 09 / 2025</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
-        </article>
+        </div>
       </div>
     </section>
+
+    <!-- Lateral derecho -->
+    <aside class="publicidad">
+      <h4>Publicidad</h4>
+      <img src="images/publicidad1.jpg" alt="Publicidad 1">
+      <img src="images/publicidad2.jpg" alt="Publicidad 2">
+    </aside>
   </main>
 </body>
 </html>
+<div class="hora" id="hora"></div>
+
+<script>
+  function actualizarHora() {
+    const ahora = new Date();
+    const horaElemento = document.getElementById("hora");
+
+    // Opciones para mostrar el nombre del mes y formato en español
+    const opcionesFecha = { day: "numeric", month: "long" };
+    const fecha = ahora.toLocaleDateString("es-ES", opcionesFecha);
+
+    // Hora con dos dígitos
+    const hora = ahora.toLocaleTimeString("es-ES", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+
+    // Mostrar fecha + hora
+    horaElemento.textContent = `${fecha} | ${hora}`;
+  }
+
+  // Actualizar cada segundo
+  setInterval(actualizarHora, 1000);
+  actualizarHora();
+</script>
